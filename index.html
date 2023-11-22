@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #006633; /* Màu xanh lá cây */
+      color: white; 
+      
+      /* Đặt chiều rộng và chiều cao mong muốn */
+      width: 100%; /* 100% chiều rộng của cửa sổ trình duyệt */
+      height: 100vh; /* 100% chiều cao của cửa sổ trình duyệt (viewport height) */
+    }
+
+    
+
+    #header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ffffff ;
+      background-color: #006633; /* Màu xanh lá cây đậm */
+    }
+
+    #logo {
+      font-size: 24px;
+    }
+
+    #nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-btn {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    #separator {
+      height: 2px;
+      background-color: white;
+      margin: 5px 0;
+    }
+
+    #menu-container {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background-color: #006633; /* Màu xanh lá cây đậm */
+      padding: 10px;
+      flex-direction: column;
+      border-radius: 5px;
+    }
+
+    #menu-container a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+      display: block;
+    }
+
+    #menu-btn {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    #middle-section {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 150px 0;
+    }
+
+    .square-box {
+      width: 250px;
+      height: 250px;
+      background-color: #9bdebd; /* Màu trắng */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-left: 175px;
+      border-radius: 40px;
+    }
+
+    .box-text {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+
+    .action-btn {
+      margin-top: 20px;
+      background-color: #00cc66; /* Màu xanh lá cây */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #footer {
+      display: flex;
+      width: 1320px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+      background-color: #ffffff; /* Màu trắng */
+      color: #006633; /* Màu xanh lá cây đậm */
+      position: absolute;
+      bottom: 0;
+    }
+
+    .circle-icon1 {
+      width: 50px;
+      height: 50px;
+      background-color: #006633; /* Màu xanh lá cây */
+      background-image: url('bongden.png');
+      background-size: cover; /* Tuỳ chỉnh kích thước của hình ảnh để đảm bảo nó che hết phần nền */
+      background-position: center; /* Căn giữa hình ảnh */
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+    }
+    .circle-icon2 {
+      width: 50px;
+      height: 50px;
+      background-color: #006633; 
+      background-image: url('cayco.png');
+      background-size: cover; /* Tuỳ chỉnh kích thước của hình ảnh để đảm bảo nó che hết phần nền */
+      background-position: center;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+    }
+    .circle-icon3 {
+      width: 50px;
+      height: 50px;
+      background-color: #006633; /* Màu xanh lá cây */
+      background-image: url('vetranh.png');
+      background-size: cover; /* Tuỳ chỉnh kích thước của hình ảnh để đảm bảo nó che hết phần nền */
+      background-position: center;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+    }
+
+    #right-section {
+      background-color: #00cc66; /* Màu xanh lá cây */
+      padding: 20px;
+      text-align: center;
+    }
+
+    #create-btn {
+      background-color: #9bdebd; /* Màu xanh lá cây nhạt */
+      color: #006633; /* Màu xanh lá cây đậm */
+      border: none;
+      padding: 74px 30px 15px 29.32px;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    
+    }
+
+    #arrow {
+      margin-left: 10px;
+      position: relative; 
+      bottom: 25px;
+    }
+    .gthieu {
+      position: relative;
+      right: 90px;
+      
+    }
+    h1 {
+            color: #006633;
+            font-size: 40px;
+          }
+
+   /* Truy vấn phương tiện cho thiết kế đáp ứng */
+@media only screen and (max-width: 768px) {
+  body {
+    /* Điều chỉnh kiểu cho màn hình nhỏ hơn */
+  }
+
+  #middle-section {
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+  }
+
+  .square-box {
+    margin-left: 0;
+  }
+
+  button {
+    position: static;
+    margin-top: 20px;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header">
+    <div id="logo">DRAW AI</div>
+    <div id="nav">
+      <div id="menu-btn" class="nav-btn" onclick="toggleMenu()">Menu</div>
+      <div id="menu-container">
+        <a href="#" class="nav-btn">Trang chủ</a>
+        <a href="draw.html" class="nav-btn">Tạo tranh mới</a>
+        <a href="thongtin.html" class="nav-btn">Thông tin</a>
+      </div>
+      <div id="separator"></div>
+      <a href="#" class="nav-btn">Log in</a>
+      <a href="#" class="nav-btn">Sign up</a>
+    </div>
+  </div>
+
+  <!-- Middle Section -->
+  <div id="middle-section">
+    <div class="square-box">
+      <div class="box-text">
+        <h1>+</h1>
+      </div>
+    </div>
+    <button style="position: relative; right: 270px; top: 150px">
+      NEW CREATE
+    </button>
+    <div class="square-box">
+      <div class="box-text">
+      <h1>+</h1>
+      </div>
+    </div>
+
+    <button style="position: relative; right: 273px; top: 150px">
+      YOUR ALBUMS
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer">
+    <div class="circle-icon1"></div>
+    <div class="gthieu">Enjoy creativity according to personal nimagination</div>
+    <div class="circle-icon2"></div>
+    <div class="gthieu">Quickly export the product</div>
+    <div class="circle-icon3"></div>
+    <div class="gthieu">Relieve stress</div>
+  </div>
+
+ 
+    <button id="create-btn"><div style="position: relative; bottom: 25px;">CREATE</div><div id="arrow" >&#8594;</div></button>
+
+
+  <script>
+    function toggleMenu() {
+      var menuContainer = document.getElementById("menu-container");
+      menuContainer.style.display = (menuContainer.style.display === "none" || menuContainer.style.display === "") ? "flex" : "none";
+    }
+  </script>
+
+</body>
+</html>
